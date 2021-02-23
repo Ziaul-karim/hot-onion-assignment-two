@@ -1,0 +1,43 @@
+.details-area{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.food-details{
+    width: 60%;
+    padding-top: 70px;
+    margin-left: 50px;
+    color: rgb(59, 59, 59);
+}
+
+.details-align{
+    width: 60%;
+    margin: auto;
+    padding-left: 100px;
+}
+.food-details h1{
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.food-details-image img{
+    width: 80%;
+    padding-right: 100px;
+}
+.quantity-control{
+    border: 1px solid red;
+    border-radius: 40px;
+    padding: 0px 25px;
+    padding-top: 15px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.operator-btn{
+    margin: 0px 20px;
+}
+
+.operator-btn:hover{
+    color: red;
+}

@@ -1,0 +1,55 @@
+.food-category-nav-links{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.food-category-nav-links li{
+    list-style: none;
+    margin: 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.food-category-nav-links li{
+    text-decoration: none;
+    font-weight: 600;
+    color: red;
+    cursor: pointer;
+}
+
+.food-container{
+    width: 70%;
+    margin: auto;
+}
+
+.foodCategorySection .card{
+    border: none;
+    align-items: center;
+    text-align: center;
+    margin: 0 40px;
+    margin-top: 40px;
+    cursor: pointer;
+    color: rgb(59, 59, 59);
+}
+
+.foodCategorySection .card:hover{    
+    box-shadow: 0 5px 13px 0px #b3afaf7a;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.banner-image{
+    background-image: url("../../header-img/bannerbackground.png");
+    background-position: center;
+    height: 60vh;
+}
+
+.banner-title{
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    top: 200px
+    
+}
