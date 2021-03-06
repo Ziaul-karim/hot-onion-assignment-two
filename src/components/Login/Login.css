@@ -1,0 +1,40 @@
+.login-form-details{
+    width:40%;
+    margin: auto;
+}
+
+.login-form-details 
+input[type = name], 
+input[type = email], 
+input[type = password], 
+input[type = submit]{
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(243, 243, 243);
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.login-form-details input[type = submit]{
+    background-color: #dc3545;
+    color: rgb(241, 241, 241);
+    padding: 20px;
+}
+
+.login-form-details input[type = submit]:hover{
+    background-color: #c53241;
+}
+
+.login-logo{
+    width: 50%;
+    margin: auto;
+}
+.switch-login{
+    width: 50%;
+    margin: auto;
+}
+.switch:hover{
+    text-decoration: underline;
+}

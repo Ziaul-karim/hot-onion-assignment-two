@@ -6,14 +6,18 @@ import { Link } from 'react-router-dom';
 
 const FoodItems = (props) => {
 
+    
+    const brFast = fakeData.filter(pd => pd.category === 'lunch')
+    const [categorizedFood, setCategorizedFood] = useState(brFast);
+    const [foodClass, setFoodClass] = useState('lunch');
     const {cart}=props;
-    const brFast = fakeData.filter(pd => pd.category === 'breakfast')
-    const [categorizedFood, setCategorizedFood] = useState(brFast)
+    //console.log(categorizedFood);
 
     const foodList = fakeData;
     const filterFood = (id)=>{
         const filterFoodCategory = foodList.filter(pd => pd.category === id);
         setCategorizedFood(filterFoodCategory);
+        setFoodClass(id);
     }
 
     return (
@@ -24,9 +28,15 @@ const FoodItems = (props) => {
             <div className="foodCategorySection">
                 <div className="food-container">
                     <ul className="food-category-nav-links">
-                        <li onClick={()=> filterFood('breakfast')}>Breakfast</li>
-                        <li onClick={()=> filterFood('lunch')}>Lunch</li>
-                        <li onClick={()=> filterFood('dinner')}>Dinner</li>
+                        <li onClick={()=> filterFood('breakfast')} className='categoryList'>
+                            <span className={foodClass === 'breakfast' ? 'active' : 'categoryList'}>Breakfast</span> 
+                        </li>
+                        <li onClick={()=> filterFood('lunch')} className='categoryList'>
+                            <span className={foodClass === 'lunch' ? 'active' : 'categoryList'}>Lunch</span> 
+                        </li>
+                        <li onClick={()=> filterFood('dinner')} className='categoryList'>
+                            <span className={foodClass === 'dinner' ? 'active' : 'categoryList'}>Dinner</span> 
+                        </li>
                     </ul>
                     <div className="row" style={{}}>
                         {
@@ -37,10 +47,8 @@ const FoodItems = (props) => {
                         }
                     </div> 
                     <div className="text-center">
-                    <button disabled className="btn btn-secondary">Check Out Your Food</button>}
-                        {/* {props.cart.length ? <Link to ='/cart'><button  className="btn btn-danger">Check Out Your Food</button></Link> : <button disabled className="btn btn-secondary">Check Out Your Food</button>}    */}
-                    </div>  
-                    
+                        {cart.length ? <Link to ='/cart'><button  className="btn btn-danger">Check Out Your Food</button></Link> : <button disabled className="btn btn-secondary">Check Out Your Food</button>}   
+                    </div>
                 </div>
             </div>
         </div>

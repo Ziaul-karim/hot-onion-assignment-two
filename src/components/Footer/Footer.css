@@ -1,0 +1,41 @@
+.first-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 30px 0;
+}
+.footer-logo img{
+    width: 30%;
+}
+.footer-spec li{
+    list-style: none;
+    letter-spacing: 0.5px;
+}
+
+.footer-spec li a{
+    color: rgb(240, 240, 240);
+}
+
+.second-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 130px;
+    background-color: black;
+    color:  rgb(240, 240, 240);
+}
+
+.conditions{
+}
+
+.footer-nav-links{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-nav-links li{
+    list-style: none;
+    margin-right: 40px;
+    color:  rgb(240, 240, 240);;
+}

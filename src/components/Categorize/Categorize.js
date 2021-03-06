@@ -6,10 +6,10 @@ const Categorize = (props) => {
     //console.log(props.food.name)
     const {name, img, details, price, key} = props.food
     return (
-        <div className="col-md-4 mb-5">
+        <div className="col-xl-4 col-md-6 col-xs-12 mb-5">
             <Link to={'/foodDetails/' + key} style={{textDecoration:'none'}}>
                 <div className="card">
-                    <img className="card-img-top" src={img} alt="Card image cap"/>
+                    <img className="card-img-top" src={img} alt="img"/>
                     <div className="card-body">
                     <h4 className="card-title">{name}</h4>
                     <p className="card-text">{details}</p>

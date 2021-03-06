@@ -28,11 +28,11 @@ const FoodDetails = (props) => {
         }
     }
 
-    const handlePlus = (foodItem) =>{
-        const newQuantity = quantity + 1;
-        setQuantity(newQuantity);
+    // const handlePlus = (foodItem) =>{
+    //     const newQuantity = quantity + 1;
+    //     setQuantity(newQuantity);
         
-    }
+    // }
     return (
         <div className='details-area'>
             <div className='food-details'>
@@ -43,7 +43,7 @@ const FoodDetails = (props) => {
                     <div className="d-flex">
                         <h1 id='total-price'><span>$</span>{price * quantity}</h1>
                         <div className='quantity-control'>
-                            <h4><span onClick={()=> handleMinus()} className='operator-btn'>-</span>{quantity}<span onClick={()=> handlePlus()} className='operator-btn'>+</span></h4>
+                            <h4><span onClick={()=> handleMinus()} className='operator-btn'>-</span>{quantity}<span onClick={()=> setQuantity(quantity + 1)} className='operator-btn'>+</span></h4>
                         </div>
                     </div>
                     <br/><br/>
@@ -54,6 +54,7 @@ const FoodDetails = (props) => {
             <div className='food-details-image'>
                 <img src={img} alt=""/>
             </div>
+            
         </div>
     );
 };
